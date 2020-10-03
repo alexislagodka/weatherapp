@@ -294,7 +294,18 @@
   text-align: center;
   color: #E7E7EB;
 }
+
+.footer{
+  
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding-top:20px;
+  height:50px;
+  color: #E7E7EB;
 }
+}
+
 /**************************************************************************/
 /*Small screen*/
 
@@ -323,13 +334,14 @@
     align-content: space-around;
     background: #1E213A;
   }
+  
+
   .weatherImgBig{
     display: flex;
     justify-content: center;
     width: 100%;
     height: 174px;
     align-content: center;
-    padding-top: 40%;
   }
   .todayTemp{
     
@@ -402,9 +414,42 @@
     height: 1023px;
     left: 0px;
     top: 0px;
-    background: #1E213A;
-    
-    
+    background: #1E213A;   
+  }
+ 
+  .searchInput{
+    width: 268px;
+    height: 48px;
+    left: 47px;
+    top: 82px;
+  }
+  .searchButton{     
+    width: 86px;
+    height: 48px;
+    left: 327px;
+    top: 82px;
+    background-color: #3C47E9;
+    font-family: "Raleway";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #E7E7EB;
+    border:none;
+  }
+  .searchResults{
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .searchResult {
+    width: 100%;
+    height:64px;
+    border:1px solid #616475;
+    background-color:#1E213A;
+    font-family:"Raleway";
+    font-size:16px;
+    text-align:left;
+    color:#E7E7EB;
+    border-radius: 2px;
   }
   /*---------------------Main---------------------*/
   .main {
@@ -543,6 +588,16 @@
     font-size: 64px;
     line-height: 75px;
     text-align: center;
+    color: #E7E7EB;
+  }
+
+  .footer{
+  
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding-top:20px;
+    height:50px;
     color: #E7E7EB;
   }
  }

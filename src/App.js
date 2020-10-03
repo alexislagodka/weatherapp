@@ -116,9 +116,10 @@ class App extends React.Component {
               <VisibilityCard visibility={this.state.todayWeatherInfos.visibility}/>
             
           </div>
+          <div className="footer">By Alexis Lagodka</div>
         </div>
-         
       </div>
+      
     </div>
   }
 }
