@@ -459,8 +459,7 @@
     flex-wrap: wrap;
    
     justify-content: center;
-    align-content: center;
-
+    
     width: 100%;
     height: 2000px;
     left: 0px;
@@ -470,11 +469,11 @@
     
   }
   .weatherCardPart{
-    width: 70%;
-    height: 800, px;
+    width: 80%;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    padding-top: 20px;
     justify-content: center;
   }
   .cardTitle{
@@ -521,19 +520,17 @@
   }
 
   .highlights{
-    
     width: 100%;
     height: 28px;
     margin-top: 20px;
     margin-bottom: 10px ;
+    
     text-align: center;
-  
     font-family: "Raleway";
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
-  
     color: #E7E7EB;
   }
   
@@ -546,6 +543,7 @@
     height: 204px;
     
     margin: 20px;
+    
     background: #1E213A;
   }
   
