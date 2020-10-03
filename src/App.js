@@ -108,13 +108,14 @@ class App extends React.Component {
         <div className="highlightsPart">
           <div className="highlights">Today's Highlights</div>
           <div className="todaysCards">  
-            
+            <div>
               <WindStatusCard windSpeed={this.state.todayWeatherInfos.wind_speed} windDirection={this.state.todayWeatherInfos.wind_direction} windDirectionCompass={this.state.todayWeatherInfos.wind_direction_compass}/>
               <HumidityCard humidity={this.state.todayWeatherInfos.humidity}/> 
-            
+              </div>
+            <div>
               <AirPressureCard airPressure={this.state.todayWeatherInfos.air_pressure}/>
               <VisibilityCard visibility={this.state.todayWeatherInfos.visibility}/>
-            
+            </div>
           </div>
           <div className="footer">By Alexis Lagodka</div>
         </div>

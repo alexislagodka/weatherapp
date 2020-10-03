@@ -222,6 +222,12 @@
   width:  100%;
   height: 100%;
 }
+.todaysCards > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
 .highlights{
   padding: 10px;
   width: 100%;
@@ -311,10 +317,8 @@
     width: 100%;
     height: 100%;
     color: #E7E7EB;
+    overflow-x: none;
   }
-  
- 
-  
   
   /*---------------------Sidebar---------------------*/
   .sidebar{
@@ -458,7 +462,7 @@
     align-content: center;
 
     width: 100%;
-    height: 1718px;
+    height: 2000px;
     left: 0px;
     top: 810px;
 
@@ -466,9 +470,9 @@
     
   }
   .weatherCardPart{
-    width: 90%;
+    width: 70%;
+    height: 800, px;
     display: flex;
-    
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
@@ -490,7 +494,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 70%;
+    width: 100%;
    
   }
   /*All days cards*/
@@ -510,6 +514,7 @@
   
   /*Today's cards*/
   .highlightsPart{
+    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
