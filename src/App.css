@@ -1,38 +1,504 @@
-.App {
+@media only screen and (min-width: 701px) {
+  /* Appareils avec une résolution au-dessus de 500px */
+
+#app{
+  width: 100%;
+  height: 100%;
+  color: #E7E7EB;
+  background: #100E1D;
+}
+
+h1{
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 144px;
+line-height: 169px;
+/* identical to box height */
+color: #E7E7EB;
+}
+
+h3{
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #E7E7EB;
+}
+
+
+/*---------------------Sidebar---------------------*/
+.sidebar{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+    padding-top: 20%; 
+  justify-content: space-around;
+  align-content: center;
+  
+  width: 30%;
+  height: 60%;
+  left: 0px;
+  top: 0px;
+
+  background: #1E213A;
+}
+.weatherImgBig{
+  display: flex;
+  width: 100%;
+  height: 234px;
+  justify-content: center;
+  align-content: center;
+  
+  
+}
+.todayTemp{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 169px;
+  
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 144px;
+  line-height: 169px;
+  color: #E7E7EB;
+}
+.todayWeatherSateName{
+  
+  
+  width: 100%;
+  height: 42px;
+  left: 165px;
+  top: 768px;
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
   text-align: center;
+
+  line-height: 42px;
+  text-align: center;
+
+  color: #A09FB1;
+}
+.todayDate {
+  
+  width: 100%;
+  height: 21px;
+  left: 148px;
+  top: 897px;
+  
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #88869D;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.place{
+  
+  width: 100%;
+  height: 21px;
+  
+  text-align: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  color: #88869D;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*---------------------SideBarSearchForm---------------------*/
+#sideBarSearchForm {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  z-index: 0;
+  width: 30%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: #1E213A;
+  
+  
+}
+/*---------------------Main---------------------*/
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 30%;
+  top: 0px;
+
+  background: #100E1D;
+  
+ justify-content: center;
+}
+.cardTitle{
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  
+  text-align: center;
+  
+  color: #E7E7EB; 
+}
+
+.weatherCardList{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  
+  
+}
+/*All days cards*/
+.weatherCard{
+  display: flex;
+  flex-direction: column;
+  width: 120px ;
+  height: 177px ;
+  background-color: #1E213A;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; 
+  margin: 13px;
+}
+.tempInterval {
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/*Today's cards*/
+.highlights{
+  position: absolute;
+  width: 220px;
+  height: 28px;
+  left: 154px;
+  top: 397px;
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #E7E7EB;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.windStatusCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+
+  width: 328px;
+  height: 204px;
+  left: 154px;
+  top: 457px;
+  background: #1E213A;
 }
+
+.humidityCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  
+  position: absolute;
+  width: 328px;
+  height: 204px;
+  left: 530px;
+  top: 457px;
+  background: #1E213A;
+}
+
+.visibilityCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  
+  position: absolute;
+  width: 328px;
+  height: 159px;
+  left: 154px;
+  top: 709px;
+
+  background: #1E213A;
+}
+
+.airPressureCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  
+  position: absolute;
+  width: 328px;
+  height: 160px;
+  left: 530px;
+  top: 709px;
+
+  background: #1E213A;
+}
+
+.cardData{
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  color: #E7E7EB;
+}
+}
+/**************************************************************************/
+/*Small screen*/
+
+@media only screen and (max-width: 700px) {
+  #app{
+    width: 100%;
+    height: 100%;
+    color: #E7E7EB;
+  }
+  
+ 
+  
+  
+  /*---------------------Sidebar---------------------*/
+  .sidebar{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 810px;
+    left: 0px;
+    top: 0px;
+    
+    justify-content: space-around;
+    align-content: space-around;
+    background: #1E213A;
+  }
+  .weatherImgBig{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 174px;
+    align-content: center;
+    padding-top: 40%;
+  }
+  .todayTemp{
+    
+    width: 100%;
+    height: 169px;
+   
+
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 144px;
+    line-height: 169px;
+    text-align: center;
+    /* identical to box height */
+  }
+  .todayWeatherSateName{
+    
+   
+    width: 100%;
+    height: 42px;
+    left: 133px;
+    top: 540px;
+    
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    
+    color: #A09FB1;
+  }
+  .todayDate {
+    
+    width: 100%;
+    height: 21px;
+    
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #88869D;
+  
+  }
+  
+  .place{
+    
+    width: 100%;
+    height: 21px;
+    
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #88869D;
+  }
+  /*---------------------SideBarSearchForm---------------------*/
+  #sideBarSearchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 1023px;
+    left: 0px;
+    top: 0px;
+    background: #1E213A;
+    
+    
+  }
+  /*---------------------Main---------------------*/
+  .main {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+    
+    justify-content: center;
+
+    width: 100%;
+    height: 1718px;
+    left: 0px;
+    top: 810px;
+
+    background: #100E1D;
+    
+  }
+  .cardTitle{
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #E7E7EB; 
+  }
+  
+  .weatherCardList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    
+  }
+  /*All days cards*/
+  .weatherCard{
+    display: flex;
+    flex-direction: column;
+    width: 120px ;
+    height: 177px ;
+    background-color: #1E213A;
+    justify-content: center;
+    align-items: center; 
+    margin: 13px;
+  }
+  .tempInterval {
+    width: 100%;
+  }
+  
+  /*Today's cards*/
+  .highlights{
+    
+    width: 220px;
+    height: 28px;
+    left: 154px;
+    top: 397px;
+  
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+  
+    color: #E7E7EB;
+  }
+  
+  .windStatusCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+    width: 328px;
+    height: 204px;
+    
+    background: #1E213A;
+  }
+  
+  .humidityCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+    width: 328px;
+    height: 204px;
+    
+    background: #1E213A;
+  }
+  
+  .visibilityCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+    width: 328px;
+    height: 204px;
+    
+    background: #1E213A;
+  }
+  
+  .airPressureCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+    width: 328px;
+    height: 204px;
+    
+    background: #1E213A;
+  }
+  
+  .cardData{
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    color: #E7E7EB;
+  }
+ }
