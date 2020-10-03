@@ -3,63 +3,45 @@
 
 #app{
   width: 100%;
-  height: 100%;
+  height: 70%;
   color: #E7E7EB;
   background: #100E1D;
 }
 
-h1{
-font-family: Raleway;
-font-style: normal;
-font-weight: 500;
-font-size: 144px;
-line-height: 169px;
-/* identical to box height */
-color: #E7E7EB;
-}
-
-h3{
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-
-  color: #E7E7EB;
-}
-
-
+ 
 /*---------------------Sidebar---------------------*/
 .sidebar{
   position: absolute;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-    padding-top: 20%; 
+  
+    
   justify-content: space-around;
   align-content: center;
   
   width: 30%;
-  height: 60%;
+  height: 100%;
   left: 0px;
   top: 0px;
 
-  background: #1E213A;
+  background: #1E213A; 
+}
+.blank{
+  height: 20%;
 }
 .weatherImgBig{
   display: flex;
   width: 100%;
-  height: 234px;
+  
   justify-content: center;
   align-content: center;
-  
-  
+
 }
 .todayTemp{
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 169px;
+  
   
 
   font-family: Raleway;
@@ -71,9 +53,8 @@ h3{
 }
 .todayWeatherSateName{
   
-  
   width: 100%;
-  height: 42px;
+  
   left: 165px;
   top: 768px;
 
@@ -91,9 +72,8 @@ h3{
 .todayDate {
   
   width: 100%;
-  height: 21px;
-  left: 148px;
-  top: 897px;
+ 
+  
   
   font-family: "Raleway";
   font-style: normal;
@@ -108,7 +88,7 @@ h3{
 .place{
   
   width: 100%;
-  height: 21px;
+  
   
   text-align: center;
   font-family: "Raleway";
@@ -132,14 +112,47 @@ h3{
   top: 0px;
   background: #1E213A;
   
-  
+}
+.searchInput{
+  width: 268px;
+  height: 48px;
+  left: 47px;
+  top: 82px;
+}
+.searchButton{     
+  width: 86px;
+  height: 48px;
+  left: 327px;
+  top: 82px;
+  background-color: #3C47E9;
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #E7E7EB;
+  border:none;
+}
+.searchResults{
+  width: 100%;
+  overflow-y: scroll;
+}
+.searchResult {
+  width: 100%;
+  height:64px;
+  border:1px solid #616475;
+  background-color:#1E213A;
+  font-family:"Raleway";
+  font-size:16px;
+  text-align:left;
+  color:#E7E7EB;
+  border-radius: 2px;
 }
 /*---------------------Main---------------------*/
 .main {
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  width: 100%;
+  width: 70%;
   height: 100%;
   left: 30%;
   top: 0px;
@@ -161,12 +174,23 @@ h3{
   color: #E7E7EB; 
 }
 
+.weatherCardPart {
+  display: flex;
+  
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  width: 50%;
+  height: 20%;
+  margin-top: 5%;
+  background-color: #100E1D;
+}
 .weatherCardList{
   display: flex;
   flex-direction: row;
-  position: absolute;
-  
-  
+  width: 100%;
+  height: 100%;
 }
 /*All days cards*/
 .weatherCard{
@@ -177,26 +201,39 @@ h3{
   background-color: #1E213A;
   justify-content: center;
   align-items: center; 
-  margin: 13px;
+  margin: 10px;
 }
 .tempInterval {
   width: 100%;
 }
 
 /*Today's cards*/
+.highlightsPart{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 80%;
+  height: 60%;
+  background-color: #100E1D;
+}
+.todaysCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 800px;
+  height: 500px;
+}
 .highlights{
-  position: absolute;
+  padding: 10px;
   width: 220px;
   height: 28px;
-  left: 154px;
-  top: 397px;
-
   font-family: "Raleway";
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
-
   color: #E7E7EB;
 }
 
@@ -204,12 +241,11 @@ h3{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: absolute;
+  
 
   width: 328px;
   height: 204px;
-  left: 154px;
-  top: 457px;
+  
   background: #1E213A;
 }
 
@@ -217,13 +253,12 @@ h3{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: absolute;
   
-  position: absolute;
+  
+  
   width: 328px;
   height: 204px;
-  left: 530px;
-  top: 457px;
+  
   background: #1E213A;
 }
 
@@ -231,13 +266,9 @@ h3{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: absolute;
   
-  position: absolute;
   width: 328px;
   height: 159px;
-  left: 154px;
-  top: 709px;
 
   background: #1E213A;
 }
@@ -246,13 +277,10 @@ h3{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: absolute;
   
-  position: absolute;
   width: 328px;
   height: 160px;
-  left: 530px;
-  top: 709px;
+  
 
   background: #1E213A;
 }
@@ -383,10 +411,9 @@ h3{
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-
-    
-    
+   
     justify-content: center;
+    align-content: center;
 
     width: 100%;
     height: 1718px;
@@ -395,6 +422,14 @@ h3{
 
     background: #100E1D;
     
+  }
+  .weatherCardPart{
+    width: 80%;
+    display: flex;
+    
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
   }
   .cardTitle{
     font-family: "Raleway";
@@ -413,8 +448,8 @@ h3{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80%;
-    
+    width: 70%;
+   
   }
   /*All days cards*/
   .weatherCard{
@@ -432,12 +467,19 @@ h3{
   }
   
   /*Today's cards*/
+  .highlightsPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .highlights{
     
-    width: 220px;
+    width: 100%;
     height: 28px;
-    left: 154px;
-    top: 397px;
+    margin-top: 20px;
+    margin-bottom: 10px ;
+    text-align: center;
   
     font-family: "Raleway";
     font-style: normal;
@@ -456,6 +498,7 @@ h3{
     width: 328px;
     height: 204px;
     
+    margin: 20px;
     background: #1E213A;
   }
   
@@ -467,6 +510,7 @@ h3{
     width: 328px;
     height: 204px;
     
+    margin: 20px;
     background: #1E213A;
   }
   
@@ -477,7 +521,7 @@ h3{
    
     width: 328px;
     height: 204px;
-    
+    margin: 20px;
     background: #1E213A;
   }
   
@@ -488,7 +532,7 @@ h3{
    
     width: 328px;
     height: 204px;
-    
+    margin: 20px;
     background: #1E213A;
   }
   

@@ -74,8 +74,8 @@ class App extends React.Component {
   render() {
     return <div id="app">
       <SideBarSearchForm onSearch={this.handleSubmit}/>
-      
       <div className="sidebar">
+      <div className="blank"></div>
         <button style={{
           position: "absolute",
           fontFamily: "Raleway",
@@ -96,21 +96,28 @@ class App extends React.Component {
       </div>
       
       <div className="main">
-        <div className="weatherCardList">
-        {this.state.weatherInfos.map((weatherDayInfos,index) => (
-          
-          index > 0 ? <WeatherCard weatherDayInfos ={weatherDayInfos}/> :""
+        <div className="weatherCardPart">
+          <div className="weatherCardList">
+          {this.state.weatherInfos.map((weatherDayInfos,index) => (
+            
+            index > 0 ? <WeatherCard weatherDayInfos ={weatherDayInfos}/> :""
 
-        ))}
+          ))}
+          </div>
         </div>
         <div className="highlightsPart">
           <div className="highlights">Today's Highlights</div>
-            <WindStatusCard windSpeed={this.state.todayWeatherInfos.wind_speed} windDirection={this.state.todayWeatherInfos.wind_direction} windDirectionCompass={this.state.todayWeatherInfos.wind_direction_compass}/>
-            <HumidityCard humidity={this.state.todayWeatherInfos.humidity}/> 
-            <AirPressureCard airPressure={this.state.todayWeatherInfos.air_pressure}/>
-            <VisibilityCard visibility={this.state.todayWeatherInfos.visibility}/>
+          <div className="todaysCards">  
+            
+              <WindStatusCard windSpeed={this.state.todayWeatherInfos.wind_speed} windDirection={this.state.todayWeatherInfos.wind_direction} windDirectionCompass={this.state.todayWeatherInfos.wind_direction_compass}/>
+              <HumidityCard humidity={this.state.todayWeatherInfos.humidity}/> 
+            
+              <AirPressureCard airPressure={this.state.todayWeatherInfos.air_pressure}/>
+              <VisibilityCard visibility={this.state.todayWeatherInfos.visibility}/>
+            
+          </div>
         </div>
-          <div>By Alexis Lagodka</div>
+         
       </div>
     </div>
   }

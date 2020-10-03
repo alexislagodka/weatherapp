@@ -53,47 +53,15 @@ class SideBarSearchForm extends React.Component {
         return <div id="sideBarSearchForm">
         <form autoComplete="off">
           
-            <input style={{
-                
-                width: "268px",
-                height: "48px",
-                left: "47px",
-                top: "82px"
-            }} type="text" name="search" value={this.state.search} onChange={this.handleInputChange}/>
+            <input className="searchInput" type="text" name="search" value={this.state.search} onChange={this.handleInputChange}/>
            
             
-            <button 
-            name="search"
-            style={{
-                
-                width: "86px",
-                height: "48px",
-                left: "327px",
-                top: "82px",
-                backgroundColor: "#3C47E9",
-                fontFamily : "Raleway",
-                fontWeight: "600",
-                fontSize: "16px",
-                lineHeight: "19px",
-                color: "#E7E7EB",
-                border:"none"
-                }} 
-                onClick={e => this.handleSearch(e) }>Search</button>
+            <button  className="searchButton"name="search" onClick={e => this.handleSearch(e) }>Search</button>
         </form>
-        <div>
+        <div className="searchResults">
         {this.state.citys.map( (city, index)  =>(
                <div> 
-                   <button style={{
-                width:"367px",
-                height:"64px",
-                border:"1px solid #616475",
-                backgroundColor:"#1E213A",
-                fontFamily :"Raleway",
-                fontSize:"16px",
-                textAlign:"left",
-                color:"#E7E7EB",
-                borderRadius: "2px"
-               }} key={index} name={city.title} id={city.woeid} onClick={this.handleClickCity}>{city.title}</button> </div>
+                   <button className="searchResult" key={index} name={city.title} id={city.woeid} onClick={this.handleClickCity}>{city.title}</button> </div>
             ))}
         </div>
         </div>
