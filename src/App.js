@@ -26,7 +26,8 @@ class App extends React.Component {
 
   componentWillMount () {
     // API Call
-      fetch('https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/608105/')
+      //fetch('https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/608105/')
+      fetch('https://www.metaweather.com/api/location/608105/')
       .then(res => res.json())
       .then(data => {
         console.log(data);
