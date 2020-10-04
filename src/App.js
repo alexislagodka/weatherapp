@@ -80,7 +80,9 @@ class App extends React.Component {
         
       </div>
       <div className="main">
-        <div></div>
+        <div className="header">
+          
+        </div>
         <WeatherNextDays weatherInfos={this.state.weatherInfos}/>
         <TodayWeatherHighlights todayWeatherInfos={this.state.todayWeatherInfos}/>
         <div className="footer">
