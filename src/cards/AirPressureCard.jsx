@@ -8,7 +8,6 @@ class AirPressureCard extends React.Component {
         return  <div className="airPressureCard">
         <div className="cardTitle">Air pressure</div>
         <div className="cardData">{airPressure} mb</div>
-        <div></div>
       </div>
     }
 }

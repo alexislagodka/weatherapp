@@ -6,10 +6,47 @@ html, body, #root, #app {
 
 
 body {
-  margin: 0;
+  margin: 0px;
   font-family: 'Raleway', sans-serif;
 }
+p{
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  }
+h1 {
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 144px;
+  line-height: 169px;
+/* identical to box height */
+  color: #E7E7EB;
+}
 
+h2{
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+
+  color: #A09FB1;
+}
+
+h3 {
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: #E7E7EB;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -6,9 +6,8 @@ class VisibilityCard extends React.Component {
         const {visibility} = this.props;
         
         return  <div className="visibilityCard">
-        <div className="cardTitle">Humidity</div>
+        <div className="cardTitle">Visivility</div>
         <div className="cardData">{parseInt(visibility)} miles</div>
-        <div></div>
       </div>
     }
 }

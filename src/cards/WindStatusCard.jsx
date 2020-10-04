@@ -7,10 +7,10 @@ class WindSatusCard extends React.Component {
         
         return  <div className="windStatusCard">
         <div className="cardTitle">Wind Status</div>
-        <div className = "cardData">{parseInt(windSpeed)} mph</div>
-        <div style={{display:"flex", justifyContent:"center"}}>
+        <div className="cardData">{parseInt(windSpeed)} mph</div>
+        <div className="compassContainer">
             <img src={navigation} alt="navigation" style={{transform:`rotate(${windDirection}deg)`}} />
-            <div> {windDirectionCompass}</div>
+            <p>{windDirectionCompass}</p>
         </div>
       </div>
     }

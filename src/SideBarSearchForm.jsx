@@ -16,7 +16,7 @@ class SideBarSearchForm extends React.Component {
         this.setState({
           [name]: value
         }); 
-        var request = `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${value}`;
+        var request = `https://www.metaweather.com/api/location/search/?query=${value}`;
         console.log(request);
         if (value) { 
             fetch(request)
@@ -50,18 +50,17 @@ class SideBarSearchForm extends React.Component {
   
     render(){
 
-        return <div id="sideBarSearchForm">
-        <form autoComplete="off">
-          
+        return <div className="sidebarSearchForm" id="sidebarSearchForm">
+        <div className="quitButtonContainer"><button className="quitButton"onClick={() => document.getElementById("sidebarSearchForm").style.zIndex ="0"}><p>X</p></button></div>
+        <form autoComplete="off" className="searchForm">
             <input className="searchInput" type="text" name="search" value={this.state.search} onChange={this.handleInputChange}/>
-           
-            
-            <button  className="searchButton"name="search" onClick={e => this.handleSearch(e) }>Search</button>
+            <button  className="searchButton"name="search" onClick={e => this.handleSearch(e) }><p>Search</p></button>
         </form>
         <div className="searchResults">
-        {this.state.citys.map( (city, index)  =>(
-               <div> 
-                   <button className="searchResult" key={index} name={city.title} id={city.woeid} onClick={this.handleClickCity}>{city.title}</button> </div>
+            {this.state.citys.map( (city, index)  =>(
+               <div className="searchResult"> 
+                   <button className="searchResultButton" key={index} name={city.title} id={city.woeid} onClick={this.handleClickCity}><p>{city.title}</p><p>{">"}</p></button>
+                </div>
             ))}
         </div>
         </div>
