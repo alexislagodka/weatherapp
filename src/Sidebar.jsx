@@ -2,6 +2,7 @@ import React from 'react';
 import WeatherImg from './WeatherImg';
 import place from './img/place.svg';
 
+
 class SideBar extends React.Component {
 
     handleSearchForPLaces(e) {

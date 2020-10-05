@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-
+import cloudBackgroun from './img/Cloud-background.png'
 import SidebarSearchForm from './SidebarSearchForm';
 import Sidebar from './Sidebar';
 import WeatherNextDays from './WeatherNextDays';
@@ -75,19 +75,21 @@ class App extends React.Component {
   render() {
     return <div id="app">
       <div className="sideBar" >
-      <Sidebar todayWeatherInfos={this.state.todayWeatherInfos} city={this.state.city} displaySearch={() => this.displaySearchbar()}/>
-      <SidebarSearchForm onSearch={(city,woeid) => this.handleSubmit(city,woeid)} />
-        
+        <div className="cloudBackgroundContainer">
+          <img className="cloudImg" src={cloudBackgroun} alt="cloud-background"/>
+        </div>
+        <Sidebar todayWeatherInfos={this.state.todayWeatherInfos} city={this.state.city} displaySearch={() => this.displaySearchbar()}/>
+        <SidebarSearchForm onSearch={(city,woeid) => this.handleSubmit(city,woeid)} />
       </div>
       <div className="main">
         <div className="header">
-          
+
         </div>
         <WeatherNextDays weatherInfos={this.state.weatherInfos}/>
         <TodayWeatherHighlights todayWeatherInfos={this.state.todayWeatherInfos}/>
         <div className="footer">
           <p>Alexis Lagodka © 2020</p>
-        </div>      
+        </div>
       </div>
       
     </div>

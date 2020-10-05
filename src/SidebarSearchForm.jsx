@@ -54,7 +54,11 @@ class SideBarSearchForm extends React.Component {
         <div className="quitButtonContainer"><button className="quitButton"onClick={() => document.getElementById("sidebarSearchForm").style.zIndex ="0"}><p>X</p></button></div>
         <form autoComplete="off" className="searchForm">
             <input className="searchInput" type="text" name="search" value={this.state.search} onChange={this.handleInputChange}/>
-            <button  className="searchButton"name="search" onClick={e => this.handleSearch(e) }><p>Search</p></button>
+            {
+                this.state.woeid === "" ? "" :  <button  className="searchButton"name="search" onClick={e => this.handleSearch(e) }><p>Search</p></button>
+            }
+            
+        
         </form>
         <div className="searchResults">
             {this.state.citys.map( (city, index)  =>(
