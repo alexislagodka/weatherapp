@@ -83,7 +83,8 @@ class App extends React.Component {
       </div>
       <div className="main">
         <div className="header">
-
+          <button className="cButton">°C</button>
+          <button className="fButton">°F</button>
         </div>
         <WeatherNextDays weatherInfos={this.state.weatherInfos}/>
         <TodayWeatherHighlights todayWeatherInfos={this.state.todayWeatherInfos}/>
