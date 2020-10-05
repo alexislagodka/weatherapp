@@ -36,6 +36,7 @@
 
   }
   .cloudImg{
+    width: 100% ;
     /*animation: defilement 15s infinite linear;*/
   }
   .sidebar {
