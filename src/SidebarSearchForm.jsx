@@ -12,7 +12,6 @@ class SideBarSearchForm extends React.Component {
         const target = event.target;
         const value =  target.value;
         const name = target.name;
-        console.log(value);
         this.setState({
           [name]: value
         }); 
@@ -53,7 +52,7 @@ class SideBarSearchForm extends React.Component {
         return <div className="sidebarSearchForm" id="sidebarSearchForm">
         <div className="quitButtonContainer"><button className="quitButton"onClick={() => document.getElementById("sidebarSearchForm").style.zIndex ="0"}><p>X</p></button></div>
         <form autoComplete="off" className="searchForm">
-            <input className="searchInput" type="text" name="search" value={this.state.search} onChange={this.handleInputChange}/>
+            <input className="searchInput" type="text" name="search" value={this.state.search} onInput={this.handleInputChange} onChange={this.handleInputChange}/>
             {
                 this.state.woeid === "" ? "" :  <button  className="searchButton"name="search" onClick={e => this.handleSearch(e) }><p>Search</p></button>
             }
