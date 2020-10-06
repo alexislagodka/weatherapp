@@ -314,6 +314,32 @@
           justify-content: center;
           
         }
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 80%;
+          height: 100%;
+          padding-left: 10%;
+        }
+        .percent{
+          display: flex;
+          justify-content: space-between;
+        }
+        .progressBar {
+          width: 100%;
+          height: 5px;
+          background-color: #e0e0e0;
+          padding: 3px;
+          border-radius: 3px;
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+        }
+        .progress-bar-fill {
+          display: block;
+          height: 6px;
+          background-color: #FFEC65;
+          border-radius: 3px; 
+        }
         .airPressureCard{
           width: 328px;
           height: 160px;
@@ -668,6 +694,33 @@
           justify-content: center;
           
         }
+          .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+            height: 100%;
+            padding-left: 10%;
+          }
+          .percent{
+            display: flex;
+            justify-content: space-between;
+          }
+          .progressBar {
+            width: 100%;
+            height: 5px;
+            background-color: #e0e0e0;
+            padding: 3px;
+            border-radius: 3px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+          }
+          .progress-bar-fill {
+            display: block;
+            height: 6px;
+            background-color: #FFEC65;
+            border-radius: 3px; 
+          }
+
         .airPressureCard{
           width: 328px;
           height: 160px;
