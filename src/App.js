@@ -18,14 +18,15 @@ class App extends React.Component {
     woeid : 608105, //Lille
     locationDay : [],
     weatherInfos : [],
-    todayWeatherInfos : []
+    todayWeatherInfos : [],
+    unit : 0 // 0 for celsius, 1 for fahrenheit
 
   }
 
   componentWillMount () {
     // API Call
-      fetch('https://www.metaweather.com/api/location/608105/')
-      //fetch('https://www.metaweather.com/api/location/608105/')
+     // fetch(`https://www.metaweather.com/api/location/${this.state.woeid}/}`)
+     fetch(`https://www.metaweather.com/api/location/608105/`)
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -78,15 +79,15 @@ class App extends React.Component {
         <div className="cloudBackgroundContainer">
           <img className="cloudImg" src={cloudBackgroun} alt="cloud-background"/>
         </div>
-        <Sidebar todayWeatherInfos={this.state.todayWeatherInfos} city={this.state.city} displaySearch={() => this.displaySearchbar()}/>
+        <Sidebar unit={this.state.unit} todayWeatherInfos={this.state.todayWeatherInfos} city={this.state.city} displaySearch={() => this.displaySearchbar()}/>
         <SidebarSearchForm onSearch={(city,woeid) => this.handleSubmit(city,woeid)} />
       </div>
       <div className="main">
         <div className="header">
-          <button className="cButton">°C</button>
-          <button className="fButton">°F</button>
+          <button className="cButton" onClick={() => this.setState({unit:0})}>°C</button>
+          <button className="fButton" onClick={() => this.setState({unit:1})}>°F</button>
         </div>
-        <WeatherNextDays weatherInfos={this.state.weatherInfos}/>
+        <WeatherNextDays unit={this.state.unit} weatherInfos={this.state.weatherInfos}/>
         <TodayWeatherHighlights todayWeatherInfos={this.state.todayWeatherInfos}/>
         <div className="footer">
           <p>Alexis Lagodka © 2020</p>

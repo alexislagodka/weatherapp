@@ -6,12 +6,12 @@ class WeatherNextDays extends React.Component {
 
     render(){
 
-        const {weatherInfos} = this.props;
+        const {unit, weatherInfos} = this.props;
 
         return <div className="weatherNextDays">
             <div className="weatherCardList">
                 {weatherInfos.map((weatherDayInfos,index) => (
-                    index > 0 ? <WeatherCard weatherDayInfos ={weatherDayInfos}/> :""
+                    index > 0 ? <WeatherCard unit={unit} weatherDayInfos ={weatherDayInfos}/> :""
                 ))}
             </div>
         </div>
