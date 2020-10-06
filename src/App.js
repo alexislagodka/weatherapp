@@ -25,8 +25,8 @@ class App extends React.Component {
 
   componentWillMount () {
     // API Call
-     // fetch(`https://www.metaweather.com/api/location/${this.state.woeid}/}`)
-     fetch(`https://www.metaweather.com/api/location/608105/`)
+     console.log(this.state.todayWeatherInfos.length);
+     fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/608105/`)
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -53,7 +53,7 @@ class App extends React.Component {
     document.getElementById("sidebarSearchForm").style.zIndex ="0";
     console.log(city,woeid);
     
-    var request = `https://www.metaweather.com/api/location/${woeid}/`;
+    var request = `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`;
     console.log(request);
     fetch(request)
       .then(res => res.json())
@@ -75,6 +75,7 @@ class App extends React.Component {
 
   render() {
     return <div id="app">
+      {this.state.weatherInfos.length === 0 ? <div style={{position:"absolute",width:"100%",height:"100%",zIndex:"4",backgroundColor:"black"}}><h1>Initialization ...</h1></div> :""}
       <div className="sideBar" >
         <div className="cloudBackgroundContainer">
           <img className="cloudImg" src={cloudBackgroun} alt="cloud-background"/>
@@ -92,8 +93,7 @@ class App extends React.Component {
         <div className="footer">
           <p>Alexis Lagodka © 2020</p>
         </div>
-      </div>
-      
+      </div> 
     </div>
   }
 }

@@ -14,6 +14,7 @@ class SideBar extends React.Component {
     render(){
         const {unit, todayWeatherInfos, city} = this.props;
 
+        
          return <div className="sidebar">
             <div className="buttonContainer">    
                 <button className="buttonSearchForPlaces" onClick={ e => this.handleSearchForPLaces(e)}>Search for places</button>
