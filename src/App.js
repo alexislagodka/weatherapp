@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import axios from 'axios';
 import cloudBackgroun from './img/Cloud-background.png'
 import SidebarSearchForm from '././components/SideBarSearchForm/SidebarSearchForm';
 import Sidebar from './components/SideBar/Sidebar';
