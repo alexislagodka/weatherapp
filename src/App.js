@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-
+import axios from 'axios';
 import cloudBackgroun from './img/Cloud-background.png'
-import SidebarSearchForm from './SidebarSearchForm';
-import Sidebar from './Sidebar';
-import WeatherNextDays from './WeatherNextDays';
-import TodayWeatherHighlights from './TodayWeatherHighlights';
-
-
-
+import SidebarSearchForm from '././components/SideBarSearchForm/SidebarSearchForm';
+import Sidebar from './components/SideBar/Sidebar';
+import WeatherNextDays from './components/WeatherNextDays/WeatherNextDays';
+import TodayWeatherHighlights from './components/TodayWeatherHighlights/TodayWeatherHighlights';
 
 class App extends React.Component {
   
@@ -19,28 +16,26 @@ class App extends React.Component {
     locationDay : [],
     weatherInfos : [],
     todayWeatherInfos : [],
-    unit : 0 // 0 for celsius, 1 for fahrenheit
-
+    unit : true // true for celsius, false for fahrenheit
   }
 
-  componentWillMount () {
+  componentDidMount () {
     // API Call
-     console.log(this.state.todayWeatherInfos.length);
-     fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/608105/`)
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        this.setState({
-          locationDay: data,
-          weatherInfos : data.consolidated_weather,
-          todayWeatherInfos : data.consolidated_weather[0]
-        });
-       
-    }).catch(function (err) {
-      console.log('Something went wrong.', err);
-    });
-    
-  }
+    console.log("Api call");
+    fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/608105/`)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      this.setState({
+        locationDay: data,
+        weatherInfos : data.consolidated_weather,
+        todayWeatherInfos : data.consolidated_weather[0]
+      });
+      
+  }).catch(function (err) {
+    console.log('Something went wrong.', err);
+  });
+}
 
   displaySearchbar = () => {
         //e.preventDefault();
@@ -48,13 +43,9 @@ class App extends React.Component {
         console.log("displaySearchbar");
   }
   
-  
   handleSubmit = (city, woeid) => {
     document.getElementById("sidebarSearchForm").style.zIndex ="0";
-    console.log(city,woeid);
-    
     var request = `https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`;
-    console.log(request);
     fetch(request)
       .then(res => res.json())
       .then(data => {
@@ -69,8 +60,6 @@ class App extends React.Component {
     }).catch(function (err) {
       console.warn('Something went wrong.', err);
     });
-    
-    
   }
 
   render() {
@@ -85,8 +74,8 @@ class App extends React.Component {
       </div>
       <div className="main">
         <div className="header">
-          <button className="cButton" onClick={() => this.setState({unit:0})}>°C</button>
-          <button className="fButton" onClick={() => this.setState({unit:1})}>°F</button>
+          <button className="cButton" onClick={() => this.setState({unit: true})}>°C</button>
+          <button className="fButton" onClick={() => this.setState({unit: false})}>°F</button>
         </div>
         <WeatherNextDays unit={this.state.unit} weatherInfos={this.state.weatherInfos}/>
         <TodayWeatherHighlights todayWeatherInfos={this.state.todayWeatherInfos}/>
