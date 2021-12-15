@@ -1,0 +1,41 @@
+.default{
+    border: none;
+    width: 40px;
+    height: 40px;
+
+    margin: 5px;
+    background: rgba(110, 112, 122, 0.3);
+
+    color: #E7E7EB;
+    border-radius: 50px;
+}
+.default:hover{
+    background: #E7E7EB;
+}
+
+.blue{
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background: #585676;
+    border-radius: 50px;
+
+    color: #E7E7EB;
+    border-radius: 50px;
+}
+.blue:hover{
+    background:rgba(110, 112, 122, 0.3);;
+}
+
+.white{
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background: #E7E7EB;
+    border-radius: 50px;
+}
+.white:hover{
+    background: rgba(110, 112, 122, 0.3);;
+}

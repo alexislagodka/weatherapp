@@ -1,0 +1,46 @@
+.weatherAppContainer {
+  font-family: 'Raleway';
+  
+  width: 100%;
+  height: 100%;
+
+  .weatherApp {
+
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Raleway';
+    color: #E7E7EB;
+
+    display: grid;
+    @media (max-width: 480px) { // Phone
+      grid-template-rows: 810px auto;
+    }
+    @media(min-width: 481px){ // Pc
+      grid-template-columns: 450px 1fr;
+    }
+
+    .sideBarContainer{
+      background: #1E213A;
+    }
+
+    .weatherDashBoard{
+      display: grid;
+      grid-template-rows: 50px auto 1fr 50px;
+
+      background: #100E1D;
+
+      .unitChoice{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+
+    }
+  }
+
+}
+
+
+  
+  

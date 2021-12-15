@@ -1,0 +1,33 @@
+.airPressureCard {
+    width: 328px;
+    height: 160px;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 100%;
+
+    background: #1e213a;
+
+    justify-content: center;
+
+    .cardTitle{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: #e7e7eb;
+    }
+    .cardData{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 75px;
+        text-align: center;
+        color: #e7e7eb;
+    }
+  }

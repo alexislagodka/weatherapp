@@ -1,0 +1,74 @@
+.sidebarSearchForm {
+    display: grid;
+    grid-template-rows: 50px 50px 1fr;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #1e213a;
+
+    .quitButtonContainer {
+        width: 100%;
+        text-align: end;
+
+        .quitButton {
+            border: none;
+            outline: none;
+            background-color: #1e213a;
+            color: #e7e7eb;
+            padding-top: 10px;
+            padding-right: 20px;
+          }
+      }
+    
+    .searchForm {
+    display: flex;
+    justify-content: center;
+        .searchInput {
+            width: 268px;
+            height: 48px;
+           
+            border: 1px solid #e7e7eb;
+            box-sizing: border-box;
+            background-color: #1e213a;
+            color: #e7e7eb;
+        }
+        .searchButton {
+            width: 86px;
+            height: 48px;
+        
+            background: #3c47e9;
+            color: #e7e7eb;
+            border: none;
+          }
+        
+    }
+    .searchResults {
+        overflow-y: scroll;
+        max-height: 1000px;
+        
+        .searchResult {
+            display: flex;
+            padding-top: 5px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            justify-items: center;
+        }
+        .searchResultButton {
+        width: 367px;
+        height: 64px;
+    
+        border: none;
+        background-color: #1e213a;
+        color: #e7e7eb;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+        .searchResultButton:hover {
+            border: 1px solid #616475;
+            box-sizing: border-box;
+          }
+      }
+  }

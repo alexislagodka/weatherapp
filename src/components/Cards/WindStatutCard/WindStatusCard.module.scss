@@ -1,0 +1,47 @@
+.windStatusCard {
+    width: 328px;
+    height: 204px;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: 100%;
+
+    background: #1e213a;
+    justify-content: center;
+
+    .cardTitle {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: #e7e7eb;
+      }
+      .cardData {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+  
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 75px;
+        text-align: center;
+        color: #e7e7eb;
+        
+      }
+      .compassContainer {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+      }
+      .compassContainer > img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #88869d;
+        margin-right: 10px;
+        padding: 5px;
+      }
+  }

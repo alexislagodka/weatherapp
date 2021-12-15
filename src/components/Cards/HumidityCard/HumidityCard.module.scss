@@ -1,0 +1,59 @@
+.humidityCard{
+    width: 328px;
+    height: 204px;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-columns: 100%;
+
+    background: #1e213a;
+    justify-content: center;
+
+    .cardTitle {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: #e7e7eb;
+      }
+      .cardData {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 75px;
+        text-align: center;
+        color: #e7e7eb;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        height: 100%;
+        padding-left: 10%;
+      }
+      .percent {
+        display: flex;
+        justify-content: space-between;
+      }
+      .progressBar {
+        width: 100%;
+        height: 5px;
+        background-color: #e0e0e0;
+        padding: 3px;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+      }
+      .progressBarFill {
+        display: block;
+        height: 6px;
+        background-color: #ffec65;
+        border-radius: 3px;
+      }
+}
+

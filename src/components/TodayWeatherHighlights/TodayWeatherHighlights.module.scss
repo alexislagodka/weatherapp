@@ -1,0 +1,38 @@
+.todaytWeatherHighlightsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .todaytWeatherHighlights {
+
+    display: grid;
+    grid-template-rows: auto auto;
+  
+      .highlightsTitle{
+        text-align: start;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+
+      }
+      .todaysCards {
+          display: grid;
+          grid-gap: 48px;
+  
+          @media (max-width: 480px) {
+            grid-template-rows: repeat(4, 204px);
+          }
+          @media(min-width: 481px){
+            grid-template-areas:
+            "a b"
+            "c d";
+            grid-template-rows: 204px 160px;
+            grid-template-columns: 328px 328px;
+          }
+          
+        }
+    }
+}
+
