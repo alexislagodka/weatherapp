@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styles from './WeatherApp.module.scss';
 import RoundButton from '../../components/Buttons/RoundButton/RoundButton';
-import cloudBackgroun from '../../assets/images/Cloud-background.png';
 import SidebarSearchForm from '../SideBarSearchForm/SidebarSearchForm';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import WeatherNextDays from '../../components/WeatherNextDays/WeatherNextDays';
