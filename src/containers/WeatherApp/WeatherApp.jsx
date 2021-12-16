@@ -26,12 +26,10 @@ export default class WeatherApp extends Component {
     
 
     componentDidMount () {
-        console.log("Api call");
         this.setState({loading : true});
         fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/608105/`)
         .then(res => res.json())
         .then(data => {
-          console.log(data);
           this.setState({
             loading: false,
             locationDay: data,
@@ -49,12 +47,10 @@ export default class WeatherApp extends Component {
     }
 
       handleSubmit = (city, woeid) => {
-        console.log("submit");
         this.setState({loading: true});
         fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`)
           .then(res => res.json())
           .then(data => {
-            console.log(data);
             this.setState({
               loading: false,
               displaySearchbar: false,
