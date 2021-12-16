@@ -47,7 +47,7 @@ const WeatherImg = (props) => {
         break;
 
         default: 
-            console.log('Error'); 
+            img = sn;
         }
     
     return <img src={img} alt={weatherAbbr} style={{width: width, height: height}}/>

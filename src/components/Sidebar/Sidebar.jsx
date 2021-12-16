@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Sidebar.module.scss';
 import WeatherImg from '../WeatherImg/WeatherImg';
 import place from '../../assets/images/place.svg';
+import RoundButton from '../Buttons/RoundButton/RoundButton';
 
 const SideBar = (props) => {
 
@@ -10,11 +11,16 @@ const SideBar = (props) => {
         props.displaySearch();
       }
 
-    const {unit, todayWeatherInfos, city} = props;
+    const {unit, todayWeatherInfos, city, getLocation}  = props;
 
     return <div className={styles.sidebar}>
         <div className={styles.buttonContainer}>    
             <button className={styles.buttonSearchForPlaces} onClick={(e) => handleSearchForPLaces(e)}>Search for places</button>
+            <RoundButton handleClick={getLocation}>
+                <span className="material-icons">
+                    my_location
+                </span>
+            </RoundButton>
         </div>
         <div className={styles.imgContainer}>
             <WeatherImg className={styles.weatherImgSidebar} weatherAbbr={todayWeatherInfos.weather_state_abbr} />

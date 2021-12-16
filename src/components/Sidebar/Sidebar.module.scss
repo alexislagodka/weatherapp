@@ -4,8 +4,11 @@
     background: #1e213a;
 
     .buttonContainer {
-        padding-top: 48px;
-        padding-left: 42px;
+        padding: 48px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
         .buttonSearchForPlaces {
             width: 161px;

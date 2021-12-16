@@ -11,7 +11,10 @@ import ErrorScreen from '../../components/ErrorScreen/ErrorScreen';
 
 export default class WeatherApp extends Component {
 
-    state = {
+    constructor(props) {
+      super(props)
+    
+      this.state = {
         loading: false,
         error: false,
         search: "",
@@ -22,8 +25,8 @@ export default class WeatherApp extends Component {
         todayWeatherInfos: [],
         displaySearchBar: false,
         unit : true // true for celsius, false for fahrenheit
-        }
-    
+      }
+    }
 
     componentDidMount () {
         this.setState({loading : true});
@@ -55,8 +58,8 @@ export default class WeatherApp extends Component {
               loading: false,
               displaySearchbar: false,
               locationDay: data,
-              weatherInfos : data.consolidated_weather,
-              todayWeatherInfos : data.consolidated_weather[0],
+              weatherInfos: data.consolidated_weather,
+              todayWeatherInfos: data.consolidated_weather[0],
               city,
               woeid
             });
@@ -66,6 +69,26 @@ export default class WeatherApp extends Component {
             error: true
           })
         });
+      }
+
+      getLocation = () => {
+        if ("geolocation" in navigator) {
+          navigator.geolocation.getCurrentPosition((position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong=${latitude},${longitude}`)
+            .then(res => res.json())
+            .then(data => {
+              const city = data[0].title;
+              const woeid = data[0].woeid;
+              this.handleSubmit(city, woeid);
+            })
+            .catch(error => {
+              console.log(error);
+            });
+          });
+        }
       }
     
       render() {
@@ -90,7 +113,9 @@ export default class WeatherApp extends Component {
                   <Sidebar 
                     unit={this.state.unit} 
                     todayWeatherInfos={this.state.todayWeatherInfos} 
-                    city={this.state.city} displaySearch={() => this.setState({displaySearchbar: true})}
+                    city={this.state.city} 
+                    displaySearch={() => this.setState({displaySearchbar: true})}
+                    getLocation = {() => this.getLocation()}
                     />
                 }
               <div className={styles.weatherDashBoard}>
