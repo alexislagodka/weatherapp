@@ -1,10 +1,10 @@
-import React from 'react';
-import WeatherApp from './containers/WeatherApp/WeatherApp';
+import React from 'react'
+import WeatherApp from './containers/WeatherApp/WeatherApp'
 
-function App() {
+function App () {
   return (
     <WeatherApp />
-  );
+  )
 }
 
-export default App;
+export default App
